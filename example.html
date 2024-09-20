@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tau Demo</title>
+        <link rel="stylesheet" href="tau.css">
+    </head>
+
+    <body>
+
+        <div center>
+            <h1>Tau Demo</h1>
+
+            <p>This is a demo page for Tau, a UI framework providing a set of reusable & beautiful components.</p>
+
+            <p class="blue">This is blue text, which can be used for links. Look here is one: <a href="https://github.com/proplayer919/tau">GitHub repo</a></p>
+
+            <label for="text-input" class="label">Text Input</label>
+            <input type="text" name="text-input" id="text-input" placeholder="Enter some text...">
+
+            <label for="number-input" class="label">Number Input</label>
+            <input type="number" name="number-input" id="number-input" min="0" max="100">
+
+            <label for="dropdown" class="label">Dropdown</label>
+            <select id="dropdown" name="dropdown">
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+            </select>
+
+            <label class="checkbox-label">
+                <input type="checkbox" id="checkbox" value="checked"> <label class="checkbox-label label">Checkbox</label>
+            </label>
+            
+            <label class="radio-label">
+                <input type="radio" name="radio" value="radio1"> <label class="radio-label label">Radio Option 1</label>
+            </label>
+            <label class="radio-label">
+                <input type="radio" name="radio" value="radio2"> <label class="radio-label label">Radio Option 2</label>
+            </label>
+            
+            <label class="label" for="range">Range Slider</label>
+            <input type="range" id="range" min="0" max="100" step="1">
+            
+            <label class="label" for="textarea">Text Area</label>
+            <textarea id="textarea" rows="4" placeholder="Write your message here..."></textarea>
+
+            <p>Here is a button that is normal:</p>
+
+            <button>Button</button>
+
+            <p>And here's one that's shiny! Much better.</p>
+            
+            <button shiny>Button</button>
+        </div>
+    </body>
+
+</html>

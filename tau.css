@@ -1,0 +1,322 @@
+/* Global styles for all elements */
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Container */
+div {
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+div[center] {
+    padding: 20px;
+    /* Make it responsive */
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Labels and text styles */
+.label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-size: 14px;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+}
+
+span {
+    display: block;
+    margin-bottom: 10px;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.blue {
+    font-weight: bold;
+    color: #007BFF;
+    cursor: pointer;
+}
+
+h1 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 30px;
+    color: #333;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Input styles */
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Dropdown styles */
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 16px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+select:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Button styles */
+button {
+    background-color: transparent;
+    color: #333;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border: #007BFF 1px solid;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 0 0 0 transparent;
+    transition: all 0.2s ease-in;
+    position: relative;
+}
+
+button:hover {
+    background-color: #007BFF;
+    color: white;
+    box-shadow: 0 0 30px 0 rgba(0, 199, 236, 0.5);
+    transition: all 0.2s ease-out;
+}
+
+button[shiny]:hover:before {
+    animation: shine 0.5s 0s linear;
+}
+
+button[shiny]:active {
+    box-shadow: 0 0 0 0 transparent;
+    transition: box-shadow 0.2s ease-in;
+}
+
+button[shiny]:before {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+
+    opacity: 0;
+    background: white;
+    box-shadow: 0 0 15px 3px white;
+    transform: skewX(-20deg);
+}
+
+@keyframes shine {
+    from {
+        opacity: 0;
+        left: 0%;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        left: 100%;
+    }
+}
+
+/* Number input */
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+input[type="number"]:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Checkbox styles */
+input[type="checkbox"] {
+    cursor: pointer;
+    width: max-content;
+    margin-right: 10px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Radio button styles */
+input[type="radio"] {
+    cursor: pointer;
+    width: max-content;
+    margin-right: 10px;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+/* Range slider */
+input[type="range"] {
+    width: 100%;
+    margin-bottom: 20px;
+    background: transparent;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    height: 8px;
+    background: #ddd;
+    border-radius: 5px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    background: #007BFF;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+input[type="range"]:focus::-webkit-slider-runnable-track {
+    background: #007BFF;
+}
+
+/* Textarea styles */
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    outline: none;
+    resize: none;
+    min-height: 100px;
+    max-height: 200px;
+    height: auto;
+}
+
+textarea:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Toggle switch */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+    margin-bottom: 20px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ddd;
+    border-radius: 25px;
+    transition: 0.4s;
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+input:checked+.toggle-slider {
+    background-color: #007BFF;
+}
+
+input:checked+.toggle-slider:before {
+    transform: translateX(25px);
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .center {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+a {
+    color: #005bbc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #8d00bc;
+}
